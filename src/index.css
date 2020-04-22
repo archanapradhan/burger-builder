@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  /* width: 100%;*/
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Open Sans", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -10,7 +11,7 @@ body {
   /* background-repeat: no-repeat;
   background-size: cover; */
   color: whitesmoke;
-  border: 2px solid skyblue;
+  border: 40px solid rgb(235, 200, 135);
 }
 /*color:#FF00FF; colorpicker.com
 	color:rgb(255,0,255);
