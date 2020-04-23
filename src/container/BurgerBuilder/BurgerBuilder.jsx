@@ -13,13 +13,26 @@ const INGREDIENT_PRICES = {
 class BurgerBuilder extends Component {
   state = {
     ingredients: {
-      salad: 1,
-      bacon: 2,
-      cheese: 2,
-      meat: 1,
+      salad: 0,
+      bacon: 0,
+      cheese: 0,
+      meat: 0,
     },
     totalPrice: 4,
+    readyForOrder: false,
   };
+
+  updateReadyToOrderState(ingredients) {
+    // const ingredients = {
+    //   ...this.state.ingredients,
+    // }; recieving the updated state will be more accurate than accessing state directly. State is not updated by the time we are accessing it
+
+    let sum = Object.values(ingredients).reduce((acc, cur) => {
+      return acc + cur;
+    }, 0);
+
+    this.setState({ readyForOrder: sum > 0 });
+  }
 
   addIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type];
@@ -33,6 +46,7 @@ class BurgerBuilder extends Component {
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice + priceAddition;
     this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
+    this.updateReadyToOrderState(updatedIngredients);
   };
 
   removeIngredientHandler = (type) => {
@@ -50,6 +64,7 @@ class BurgerBuilder extends Component {
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice - priceDeduction;
     this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
+    this.updateReadyToOrderState(updatedIngredients);
   };
 
   render() {
@@ -68,6 +83,8 @@ class BurgerBuilder extends Component {
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
           disabled={disabledInfo}
+          price={this.state.totalPrice}
+          readyForOrder={this.state.readyForOrder}
         ></BuildControls>
       </Wrap>
     );
