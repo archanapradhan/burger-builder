@@ -6,7 +6,6 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          Test
           <BurgerBuilder></BurgerBuilder>
         </Layout>
       </div>

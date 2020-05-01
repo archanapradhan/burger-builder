@@ -19,6 +19,9 @@ const orderSummary = (props) => {
         <div style={{ fontFamily: "Cookie", fontSize: "1.5rem" }}>
           <p>A delicious burger with the following ingredients:</p>
           <ul>{ingredientSummary}</ul>
+          <p>
+            <strong>Total Price:{props.totalPrice.toFixed(2)}</strong>
+          </p>
         </div>
         <p>Continue to Checkout!</p>
         <Button btnType="Danger" clicked={props.orderCancelled}>
