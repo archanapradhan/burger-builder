@@ -17,3 +17,14 @@
 .Toolbar nav {
   height: 100%;
 }
+
+.Logo {
+  height: 80%;
+}
+
+/* for mobile view dont show the navigation items in the toolbar behind*/
+@media (max-width: 499px) {
+  .DesktopOnly {
+    display: none;
+  }
+}
