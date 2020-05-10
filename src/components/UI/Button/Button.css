@@ -8,11 +8,19 @@
   padding: 10px;
   margin: 10px;
   font-weight: bold;
+  border: 2px ridge grey;
+
+  box-sizing: border-box;
 }
 
 .Button:first-of-type {
   margin-left: 0;
   padding-left: 0;
+}
+.Button:hover {
+  background-color: rgba(255, 255, 255, 0.514);
+  border: 4px ridge grey;
+  color: rgb(92, 89, 89);
 }
 
 .Success {

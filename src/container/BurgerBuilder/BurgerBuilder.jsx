@@ -93,7 +93,7 @@ class BurgerBuilder extends Component {
       <Wrap>
         <Modal
           show={this.state.orderPlaced}
-          modalClosed={this.orderCancelHandler}
+          modalClosed={this.orderCancelledHandler}
         >
           <OrderSummary
             ingredients={this.state.ingredients}
