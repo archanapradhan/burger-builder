@@ -4,7 +4,8 @@ import Logo from "../../Logo/Logo";
 import NavigationItems from "../../Navigation/NavigationItems/NavigationItems";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 import Wrap from "../../../hoc/Wrap";
-import backdrop from "../../UI/Backdrop/Backdrop";
+// import backdrop from "../../UI/Backdrop/Backdrop";
+// import burgerLogo from "../../assets/Images/burgerLogo.png";
 
 const sideDrawer = (props) => {
   //some functions for open close animations
