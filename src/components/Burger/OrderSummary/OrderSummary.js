@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Wrap from "../../../hoc/Wrap";
 import Button from "../../UI/Button/Button";
 class OrderSummary extends Component {
-  state = {};
-
   componentDidUpdate() {
     console.log("[OrderSummary] will update.");
   }
